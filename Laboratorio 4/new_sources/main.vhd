@@ -16,10 +16,14 @@ end messages_storage;
 
 architecture arch of messages_storage is
 
+    -- Puede que aqui se necesite un process
+
     signal letter_sigA: std_logic_vector(6 downto 0);
     signal letter_sigB: std_logic_vector(6 downto 0);
     signal letter_sigC: std_logic_vector(6 downto 0);
     signal letter_sigD: std_logic_vector(6 downto 0);
+
+    -- Estas declaraciones parecen no ser necesarias:
 
     -- component SEVEN_SEG_MSG1 is
 

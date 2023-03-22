@@ -13,7 +13,7 @@
 
     architecture Behavioral of SEVEN_SEG_MSG2 is
         begin
-            -- process msg_inxd
+            -- process msg_indx
             -- begin
         
             case msg_inxd is

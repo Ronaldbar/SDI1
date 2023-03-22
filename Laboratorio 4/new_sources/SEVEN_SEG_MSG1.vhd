@@ -13,12 +13,16 @@
 
     architecture Behavioral of SEVEN_SEG_MSG1 is
         begin
-            process msg_indx
-            begin
-        -- JOE HERNANDEZ  SAM LOPEZ  RON BARRETO --
-        -- display <= "1110";
-        
-        case msg_indx is
+            --no estoy seguro del process por que segun lo que vi, no lo ponen,
+            --pero vivado lo pide, puede que sea solo cuando corre este arhivo directamente en la FPGA
+            
+            -- process msg_indx 
+            -- begin
+            
+            -- JOE HERNANDEZ  SAM LOPEZ  RON BARRETO --
+            -- display <= "1110";
+            
+            case msg_indx is
             when x"00" => letter <= x"C3";
             when x"01" => letter <= x"81";
             when x"02" => letter <= x"B0";
@@ -52,7 +56,7 @@
             when others => letter <= x"FF";
         
         end case;
-            end process;
+        -- end process;
     end Behavioral;
 
     

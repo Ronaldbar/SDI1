@@ -13,13 +13,13 @@
 
     architecture Behavioral of SEVEN_SEG_MSG3 is
         begin
-            process msg_indx
-            begin
-        -- DOÑA NUBIA LE MANDA SALUDOS PROFE --
+            -- process msg_indx
+            -- begin
 
-        -- display <= "0100";
-        
-        case msg_inxd is
+            -- DOÑA NUBIA LE MANDA SALUDOS PROFE --
+            -- display <= "0100";
+            
+            case msg_inxd is
             when x"00" => letter <= x"C2";
             when x"01" => letter <= x"81";
             when x"02" => letter <= x"AA";

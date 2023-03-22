@@ -13,12 +13,13 @@
 
     architecture Behavioral of SEVEN_SEG_MSG2 is
         begin
-            process msg_inxd
-            begin
-        -- EN ESTA MATERIA SE APRENDE MUCHO --
-        -- display <= "0010";
+            -- process msg_inxd
+            -- begin
         
-        case msg_inxd is
+            case msg_inxd is
+
+            -- EN ESTA MATERIA SE APRENDE MUCHO --
+            -- display <= "0010";
 
             when x"00" => letter <= x"B0";
             when x"01" => letter <= x"EA";
@@ -50,5 +51,5 @@
             when others => letter <= x"FF";
 
             end case;
-        end process;
+        -- end process;
     end Behavioral;

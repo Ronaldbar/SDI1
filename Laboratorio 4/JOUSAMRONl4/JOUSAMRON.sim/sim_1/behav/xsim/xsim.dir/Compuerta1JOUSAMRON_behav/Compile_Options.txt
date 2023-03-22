@@ -1,0 +1,1 @@
+-wto "cdf107dfe48d4c15ad7ae2d86e073574" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "Compuerta1JOUSAMRON_behav" "xil_defaultlib.Compuerta1JOUSAMRON" -log "elaborate.log" 

@@ -17,7 +17,7 @@ entity messages_storage is
 
         -- 7 SEGMENTS
         -- I/O: (V7 W7 W6 U8 V8 U5 V5 U7) -- TIENE QUE SER EN ESTE ORDEN!!
-        letter_out : out std_logic_vector(6 downto 0);
+        letter : out std_logic_vector(6 downto 0);
     );
 end messages_storage;
 
@@ -87,16 +87,16 @@ architecture arch of messages_storage is
             
             msg1: entity work.SEVEN_SEG_MSG1 port map (
                 msg_indx => indx,
-                letter_out => letter_sigA);
+                letter => letter_sigA);
             msg2: entity work.SEVEN_SEG_MSG2 port map (
                 msg_indx => indx,
-                letter_out => letter_sigB);
+                letter => letter_sigB);
             msg3: entity work.SEVEN_SEG_MSG3 port map (
                 msg_indx => indx,
-                letter_out => letter_sigC);
+                letter => letter_sigC);
             msg4: entity work.SEVEN_SEG_MSG4 port map (
                 msg_indx => indx,
-                letter_out => letter_sigD);
+                letter => letter_sigD);
     
             mux: entity work.mux4a1 port map (
                 I(0)=>letter_sigA,
@@ -104,7 +104,7 @@ architecture arch of messages_storage is
                 I(2)=>letter_sigC,
                 I(3)=>letter_sigD,
                 S=>s,
-                Y=>letter_out
+                Y=>letter
                 );
             
             deco: entity work.deco2a4A port map (

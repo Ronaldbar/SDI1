@@ -1,4 +1,4 @@
-    library library IEEE;
+ library IEEE;
     use IEEE.std_logic_1164.all;
    
     entity SEVEN_SEG_MSG2 is
@@ -13,8 +13,8 @@
 
     architecture Behavioral of SEVEN_SEG_MSG2 is
         begin
-            -- process msg_indx
-            -- begin
+            process (msg_inxd)
+            begin
         
             case msg_inxd is
 
@@ -51,5 +51,6 @@
             when others => letter <= x"FF";
 
             end case;
-        -- end process;
+        end process;
     end Behavioral;
+                

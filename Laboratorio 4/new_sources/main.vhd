@@ -23,12 +23,6 @@ end messages_storage;
 
 architecture arch of messages_storage is
 
-    -- Puede que aqui se necesite un process
-
-      -- process msg_indx 
-            -- begin
-            
-
     signal letter_sigA: std_logic_vector(6 downto 0);
     signal letter_sigB: std_logic_vector(6 downto 0);
     signal letter_sigC: std_logic_vector(6 downto 0);
@@ -86,6 +80,10 @@ architecture arch of messages_storage is
     --  end component;
 
     begin
+        -- Puede que aqui se necesite un process
+
+      -- process msg_indx 
+            -- begin
             
             msg1: entity work.SEVEN_SEG_MSG1 port map (
                 msg_indx => indx,

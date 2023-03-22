@@ -8,10 +8,16 @@ entity mux4a1 is
     );
  end mux4a1;
 
-architecture arch_mux41 of mux4a1 is begin
+architecture arch_mux41 of mux4a1 is
+    begin
 
+    -- process mux41
+    -- begin
+        
     Y <= I(0) WHEN S="00" 
     ELSE I(1) WHEN S="01" 
     ELSE I(2) WHEN S="10" 
     ELSE I(3); 
+
+    --end process;
 end arch_mux41;

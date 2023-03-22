@@ -13,12 +13,13 @@
 
     architecture Behavioral of SEVEN_SEG_MSG4 is
         begin
-            process msg_indx
-            begin
-        -- ME QUEDO GRANDE MUCHACHOS --
-        -- display <= "1000";
-        
-        case msg_indx is
+            -- process msg_indx
+            -- begin
+
+            -- ME QUEDO GRANDE MUCHACHOS --
+            -- display <= "1000";
+            
+            case msg_indx is
             when x"00" => letter <= x"AB";
             when x"01" => letter <= x"B0";
             when x"02" => letter <= x"8C";
@@ -45,5 +46,5 @@
             when others => letter <= x"FF";
         
             end case;
-        end process;
+        -- end process;
     end Behavioral;

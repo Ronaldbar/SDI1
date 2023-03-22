@@ -4,12 +4,19 @@ use IEEE.std_logic_1164.all;
 entity messages_storage is
     port (
         -- 5 SWITCHES
+        -- I/O: (R2 T1 U1 W2 R3)
         indx : in std_logic_vector(4 downto 0);
+
         -- 2 SWITCHES -- MULTIPLEXER CHANNEL
+        -- I/O: (T2 T3)
         s : in std_logic_vector(1 downto 0);
+
         -- 4 DISPLAYS
+        -- I/O: (W4 V4 U4 U2)
         display : out std_logic_vector(3 downto 0);
+
         -- 7 SEGMENTS
+        -- I/O: (V7 W7 W6 U8 V8 U5 V5 U7) -- TIENE QUE SER EN ESTE ORDEN!!
         letter_out : out std_logic_vector(6 downto 0);
     );
 end messages_storage;
@@ -17,6 +24,10 @@ end messages_storage;
 architecture arch of messages_storage is
 
     -- Puede que aqui se necesite un process
+
+      -- process msg_indx 
+            -- begin
+            
 
     signal letter_sigA: std_logic_vector(6 downto 0);
     signal letter_sigB: std_logic_vector(6 downto 0);
@@ -103,5 +114,5 @@ architecture arch of messages_storage is
                 Y=>display
                 );
 
-
+        -- end process;
         end arch;

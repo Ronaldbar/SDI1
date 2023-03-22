@@ -11,8 +11,13 @@ end deco2a4A;
 
 architecture Arch_deco2a4A of deco2a4A is
     begin
+    -- process msg_indx 
+    -- begin
+        
         Y(0)<= '1' WHEN S="00" ELSE '0'; 
         Y(1)<= '1' WHEN S="01" ELSE '0'; 
         Y(2)<= '1' WHEN S="10" ELSE '0'; 
         Y(3)<= '1' WHEN S="11" ELSE '0';
+        
+-- end process;
 end Arch_deco2a4A;
